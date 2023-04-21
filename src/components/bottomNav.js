@@ -19,7 +19,7 @@ export default function BottomNav(props) {
             onChange={handleChange}
         >
             <BottomNavigationAction
-                href='expenses'
+                href='/expenses'
                 label="Expenses"
                 value="expenses"
                 icon={<CurrencyExchangeIcon />}

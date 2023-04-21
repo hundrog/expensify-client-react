@@ -22,7 +22,7 @@ export default function AppLayout() {
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <Container maxWidth="sm">
-        <Box>
+        <Box sx={{ mt:2 }}>
           <Outlet />
         </Box>
         <Box sx={{ position: 'fixed', bottom: 0, left: 0, right: 0}} >

@@ -2,8 +2,10 @@ import * as React from "react";
 import Card from "@mui/material/Card";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
+import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import ExpensesMenu from "./expensesMenu";
 
 export default function ExpensesItem(props) {
   return (
@@ -11,14 +13,13 @@ export default function ExpensesItem(props) {
       index={props.id}
       sx={{ width: "100%", backgroundColor: props.color, mb: 3 }}
     >
+      <CardHeader
+        action={<ExpensesMenu id={props.id}/>}
+        title={props.name}
+      />
       <CardContent>
         <Box sx={{ flexGrow: 1, pa: 2 }}>
           <Grid container spacing={2}>
-            <Grid item xs={12} display="flex" justifyContent="center">
-              <Typography variant="h5" display="flex">
-                {props.name}
-              </Typography>
-            </Grid>
             <Grid item xs={4} display="flex" justifyContent="center">
               <Typography>{props.type}</Typography>
             </Grid>

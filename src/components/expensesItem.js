@@ -14,7 +14,7 @@ export default function ExpensesItem(props) {
       sx={{ width: "100%", backgroundColor: props.color, mb: 3 }}
     >
       <CardHeader
-        action={<ExpensesMenu id={props.id}/>}
+        action={<ExpensesMenu {...props}/>}
         title={props.name}
       />
       <CardContent>

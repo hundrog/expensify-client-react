@@ -13,6 +13,7 @@ export default function ExpensesMenu(props) {
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
+    console.log(props)
   };
   const handleClose = () => {
     setAnchorEl(null);
